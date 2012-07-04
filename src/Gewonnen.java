@@ -1,6 +1,11 @@
+/**
+ * Die Klasse generiert das Fenster bei Sieg, das ebenfalls als Button zum nächsten Level dient.
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.File;
 
 public class Gewonnen extends JFrame {
 
@@ -10,6 +15,9 @@ public class Gewonnen extends JFrame {
 
 	GameMaster game;
 
+	/*
+	 * Konstruktor, dem ein GameMaster übergeben wird.
+	 */
 	public Gewonnen(GameMaster master) {
 
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -24,7 +32,7 @@ public class Gewonnen extends JFrame {
 		this.setLayout(null);
 		game = master;
 		this.Ihintergrund = ImageLoader.getImage(Game.class,
-				"IMG//gewonnen.jpg");
+				"IMG"+File.separator+"Gewonnen.jpg");
 		this.iconHintergrund = new ImageIcon(this.Ihintergrund);
 
 		this.okay.setIcon(iconHintergrund);
@@ -32,7 +40,17 @@ public class Gewonnen extends JFrame {
 
 		this.okay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				new Felder(game.currentLvl, game);
+				if (!Felder.game.netzwerk){
+					if(!Felder.game.offlineMulti){
+						new Felder(game.currentLvl, game);
+					}
+					else if(Felder.game.offlineMulti){
+						FigurBomberman.destroy();
+						new Felder(game.currentLvl, game, true);
+					}
+				}
+				else
+					game.setVisible(true);
 				setVisible(false);
 			}
 		});

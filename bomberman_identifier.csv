@@ -1,0 +1,27 @@
+"Nichts",-1,,
+"Fussboden",0,,
+"Bomben",1,"Bombermann + Bombe",3
+"Bomberman",2,,
+"Wand",4,,
+"Zerstoerbare Wand",8,,
+"Bombenrange",16,"Bombenrange + Zerstoerbare Wand",24
+"Bombenanzahl",32,"Bombenpower + Zerstoerbare Wand",40
+"Ausgang",64,"Zerstoerbare Wand + Ausgang",72
+"Schluessel",128,"Zerstoerbare Wand + Schluessel",136
+"Item Minus",144,"Zerstoerbare Wand + Item minus",152
+"Item Groesser",160,"Zerstoerbare Wand + Item groesser",168
+,,,
+"Monster",256,,
+"Bomberman2/Computergegner",512,"Bomberman2 + Bombe",513
+"Bomberman 1 + 2 (Nr. 1 oben)",514,,
+"Erhoehung der Laufgeschwindigkeit",1024,,
+"Fernzuender",2048,,
+"Bomben_explosion_anfang",4096,,
+"Bomben_explosion_mitte_r",8192,,
+"Bomben_explosion_mitte_l",16384,,
+"Bomben_explosion_mitte_o",32768,,
+"Bomben_explosion_mitte_u",65536,,
+"Bomben_explosion_ende_r",131072,,
+"Bomben_explosion_ende_l",262144,,
+"Bomben_explosion_ende_o",524288,,
+"Bomben_explosion_ende_u",1048576,,
